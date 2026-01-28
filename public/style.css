@@ -1,0 +1,283 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+input,
+select,
+textarea {
+	background-color: transparent;
+	outline: none;
+}
+button {
+	cursor: pointer;
+	background-color: transparent;
+	outline: none;
+	border: 0;
+}
+body {
+	min-height: 100vh;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1;
+}
+
+#app {
+	height: 100vh;
+}
+
+.pokemonWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	width: 1000px;
+	margin: auto;
+	transform-style: preserve-3d;
+	margin-top: 120px;
+}
+
+.pokemon {
+	width: calc((100% / 5) - 20px);
+	height: 100px;
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	border-radius: 8px;
+	overflow: hidden;
+	perspective: 500px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	transform-origin: center;
+	transition: all 0.5s;
+	transform-style: preserve-3d;
+}
+
+.pokemon-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	position: relative;
+	transition: all 0.5s;
+	transform-style: preserve-3d;
+}
+
+.card-face {
+	position: absolute;
+	border-radius: 10px;
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pokemon.flipped {
+	transform: rotateY(180deg);
+}
+
+.front {
+	background: white;
+}
+
+/* .back {
+	background: #273469;
+	transform: rotateY(180deg);
+} */
+
+.pokemon .id {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-color: #c7bd82;
+	padding: 7px 14px;
+	color: #333231;
+	border-bottom-right-radius: 8px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.pokemon img {
+	width: 60px;
+	height: 60px;
+}
+
+/* 
+transition: all 0.5s;
+transform-style: preserve-3d;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+*/
+
+/* ... Giữ nguyên các phần cũ của bạn ... */
+
+/* CSS bổ sung cho phần nhập tên */
+#login-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #273469;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.login-box h1 {
+    color: #273469;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#username {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-bottom: 15px;
+    min-height: 18px;
+}
+
+#start-btn {
+    background: #c7bd82;
+    color: #333231;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+#start-btn:hover {
+    background: #b1a660;
+    transform: translateY(-2px);
+}
+
+/* ... Giữ nguyên các phần cũ của bạn ... */
+
+/* Thêm mới cho Login Screen */
+#login-screen {
+    position: fixed;
+    inset: 0;
+    background: #273469;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 400px;
+}
+
+#username {
+    width: 80%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-bottom: 10px;
+    min-height: 15px;
+}
+
+#start-btn {
+    background: #c7bd82;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Thêm mới cho Game Controls */
+.game-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.control-btn {
+    padding: 8px 25px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+#cancel-btn { background-color: #f39c12; }
+#delete-btn { background-color: #e74c3c; }
+
+/* ... Giữ nguyên các phần reset cũ của bạn ... */
+
+#login-screen {
+    position: fixed; inset: 0; background: #273469;
+    display: flex; justify-content: center; align-items: center; z-index: 1000;
+}
+.login-box { background: white; padding: 30px; border-radius: 12px; text-align: center; width: 400px; }
+#error-message { color: #e74c3c; font-size: 13px; margin: 10px 0; min-height: 15px; }
+#start-btn { background: #c7bd82; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+
+.game-controls { text-align: center; padding: 20px; }
+.control-btn { padding: 8px 25px; margin: 0 10px; border-radius: 5px; font-weight: bold; color: white; cursor: pointer; border: none; }
+#cancel-btn { background-color: #f39c12; }
+#reset-btn { background-color: #e74c3c; }
+
+.pokemonWrapper { display: flex; flex-wrap: wrap; gap: 20px; width: 1000px; margin: auto; perspective: 1000px; }
+.pokemon { width: calc((100% / 5) - 20px); height: 150px; cursor: pointer; }
+.pokemon-card { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; }
+
+/* Hiệu ứng lật thẻ */
+.pokemon.flipped .pokemon-card { transform: rotateY(180deg); }
+.card-face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+
+.front { background: #273469; border: 2px solid #fff; } /* Mặt úp */
+.back { background: #fff; transform: rotateY(180deg); border: 2px solid #273469; } /* Mặt ngửa */
+
+/* Trạng thái sai (unmatched) */
+.pokemon.unmatched .back { background-color: #ff4757; }
+/* Trạng thái đúng (matched) */
+.pokemon.matched .back { background-color: #747d8c; }
+
+.pokemon img { width: 80px; height: 80px; }
+.pokemon .id { position: absolute; top: 5px; left: 5px; background: #c7bd82; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
